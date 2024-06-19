@@ -16,6 +16,22 @@ contactForm.addEventListener('submit', function (event) {
     }
 });
 
+emailInput.addEventListener('blur', () => {
+    validateEmail();
+})
+countryInput.addEventListener('blur', () => {
+    validateCountry();
+})
+zipInput.addEventListener('blur', () => {
+    validateZipCode();
+})
+passwordInput.addEventListener('blur', () => {
+    validatePassword();
+})
+confirmPasswordInput.addEventListener('blur', () => {
+    validateConfirmPassword();
+})
+
 function validateForm() {
     let isValid = true;
 
