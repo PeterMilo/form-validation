@@ -3,34 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form validation</title>
+    <title>Form Validation</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
-
-    <form action="" method="post">
+    <form class="form" action="" method="post" id="contact-form" novalidate>
         <div class="form-row">
             <label for="email"></label>
-            <input type="email" id="email" name="email" placeholder="Email">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <span class="error-message" id="email-error"></span>
         </div>
         <div class="form-row">
             <label for="country"></label>
-            <input type="text" id="country" name="country" placeholder="Country">
+            <select id="country" name="country" placeholder="Country" required>
+                <option value="">Select Country</option>
+                <option value="CH">Switzerland</option>
+                <option value="FR">France</option>
+                <option value="DE">Germany</option>
+                <option value="NL">Netherlands</option>
+                <option value="DK">Denmark</option>
+                <!-- Add other countries as needed -->
+            </select>
+            <span class="error-message" id="country-error"></span>
         </div>
         <div class="form-row">
             <label for="zip-code"></label>
             <input type="text" id="zip-code" name="zip-code" placeholder="Zip-code">
+            <span class="error-message" id="zip-error"></span>
         </div>
         <div class="form-row">
             <label for="password"></label>
-            <input type="password" name="password" id="password" placeholder="Password">
+            <input type="password" name="password" id="password" placeholder="Password" minlength="8" required>
+            <span class="error-message" id="password-error"></span>
         </div>
         <div class="form-row">
-            <label for="password"></label>
-            <input type="password" name="password-confirm" id="password" placeholder="Confirm password">
+            <label for="confirm-password"></label>
+            <input type="password" name="password-confirm" id="confirm-password" placeholder="Confirm Password" required>
+            <span class="error-message" id="confirm-password-error"></span>
+        </div>
+        <div class="form-row">
+            <button type="submit">Submit</button>
         </div>
     </form>
-    
 </body>
 </html>

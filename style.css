@@ -1,3 +1,16 @@
 body {
     background-color: rgb(71, 102, 102);
 }
+
+.error-message {
+    display: none;
+    margin: .3rem 0 .5rem .3rem;
+}
+
+.form > .form-row > * {
+    width: 10rem;
+}
+
+#country  {
+    width: 10.5rem;
+}
